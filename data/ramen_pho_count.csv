@@ -1,1 +1,28 @@
-city ,state,country,ramen_count,pho_countSan Francisco,California,USA,869,596Toronto,Ontario,Canada,314,282Vancouver,British Columbia,Canada,303,274Los Angeles,California,USA,1802,1503Chicago,Illinois,USA,431,232New York,New York,USA,1501,455Houston,Texas,USA,227,455Washington,DC,USA,288,333Montreal,Quebec,Canada,103,163Philadelphia,Pennsylvania ,USA,174,209Dallas,Texas,USA,222,291Atlanta,Georgia,USA,233,219Boston,Massachusetts,USA,246,195Miami,Florida,USA,143,70San Diego,California,USA,406,376Phoenix,Arizona,USA,201,178Seattle,Washington,USA,377,535Detroit,Michigan,USA,91,70Minneapolis,Minnesota,USA,94,218Tampa,Florida,USA,70,106Denver,Colorado,USA,168,256Baltimore,Maryland,USA,72,54Portland,Oregon,USA,229,259Las Vegas,Nevada,USA,283,239Nashville,Tennessee,USA,39,62Cleveland,Ohio,USA,50,49Charlotte,South Carolina,USA,48,76
+city,state,country,ramen_count,pho_count
+San Francisco,California,USA,869,596
+Toronto,Ontario,Canada,314,282
+Vancouver,British Columbia,Canada,303,274
+Los Angeles,California,USA,1802,1503
+Chicago,Illinois,USA,431,232
+New York,New York,USA,1501,455
+Houston,Texas,USA,227,455
+Washington,DC,USA,288,333
+Montreal,Quebec,Canada,103,163
+Philadelphia,Pennsylvania ,USA,174,209
+Dallas,Texas,USA,222,291
+Atlanta,Georgia,USA,233,219
+Boston,Massachusetts,USA,246,195
+Miami,Florida,USA,143,70
+San Diego,California,USA,406,376
+Phoenix,Arizona,USA,201,178
+Seattle,Washington,USA,377,535
+Detroit,Michigan,USA,91,70
+Minneapolis,Minnesota,USA,94,218
+Tampa,Florida,USA,70,106
+Denver,Colorado,USA,168,256
+Baltimore,Maryland,USA,72,54
+Portland,Oregon,USA,229,259
+Las Vegas,Nevada,USA,283,239
+Nashville,Tennessee,USA,39,62
+Cleveland,Ohio,USA,50,49
+Charlotte,South Carolina,USA,48,76
