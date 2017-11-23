@@ -12,6 +12,7 @@ Major city data:
 
 Yelp Fusion
 - see script that gets food review data [here](https://github.com/topspinj/yelp-fusion)
+- explanation of Yelp search results [here](https://www.yelp-support.com/article/How-does-Yelp-decide-which-reviews-to-feature-in-search-results?l=en_US)
 
 
 ## Installation Instructions 
