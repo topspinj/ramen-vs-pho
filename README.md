@@ -1,20 +1,26 @@
 # Ramen vs. Pho
 
-## Project description
+This project investigates the popularity of pho and ramen in major cities across North America.
 
-This project explores the popularity of ramen and pho in the 30 largest metropolitan areas in North America using data from Yelp Fusion API. 
+## Question
 
-## Data source
+Which is more popular: pho or ramen? 
 
-Major city data:
-- [factfinder](https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?src=bkmk)
-- [statcan](http://www.statcan.gc.ca/pub/91-214-x/2016000/tbl/tbl1.1-eng.htm)
+## Data Source
 
-Yelp Fusion
-- see script that gets food review data [here](https://github.com/topspinj/yelp-fusion)
-- explanation of Yelp search results [here](https://www.yelp-support.com/article/How-does-Yelp-decide-which-reviews-to-feature-in-search-results?l=en_US)
+Data will be obtained from Yelp Fusion API for the top 30 metropolitian areas in North America [1](https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?src=bkmk), [2](http://www.statcan.gc.ca/pub/91-214-x/2016000/tbl/tbl1.1-eng.htm). 
+
+I used Yelp Fusion's python sample script as a template and modified it to retrieve the top 5 ramen/pho restaurants in each city. The script converts the response into a dataframe and outputs it as a csv file. I also pull the total number of restaurants for each query and store it in a separate csv file. 
+
+Yelp explains their search results algorithm [here](https://www.yelp-support.com/article/How-does-Yelp-decide-which-reviews-to-feature-in-search-results?l=en_US).
 
 
-## Installation Instructions 
+## Hypothesis 
 
-Installation instructions go here. 
+Ramen is more popular than pho in North America. 
+
+## Data Analysis Plan 
+
+- compare number of pho vs. ramen restaurants in 30 cities (use paired t-test)
+- compare total number of reviews for top 5 pho and ramen restaurants 
+- map pho vs. ramen data for each city on map of North America (ggplot2?)
