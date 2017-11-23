@@ -12,6 +12,8 @@ Data will be obtained from Yelp Fusion API for the top 30 metropolitian areas in
 
 I used Yelp Fusion's python sample script as a template and modified it to retrieve the top 5 ramen/pho restaurants in each city. The script converts the response into a dataframe and outputs it as a csv file. I also pull the total number of restaurants for each query and store it in a separate csv file. 
 
+See my script [here](https://github.com/topspinj/yelp-fusion/tree/master/fusion/python)
+
 Yelp explains their search results algorithm [here](https://www.yelp-support.com/article/How-does-Yelp-decide-which-reviews-to-feature-in-search-results?l=en_US).
 
 
