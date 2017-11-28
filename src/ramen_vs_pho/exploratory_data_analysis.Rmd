@@ -1,0 +1,32 @@
+---
+title: "exploratory_data_analysis"
+author: "Jill Cates"
+date: '2017-11-27'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(maps)
+```
+
+```{r}
+usa <- map_data("usa")
+canada <- map_data("world", "canada")
+north_america <- ggplot() + geom_polygon(data = usa, aes(x=long, y = lat, group = group)) + geom_polygon(data = canada, aes(x=long, y = lat, group = group)) +theme_bw()
+```
+
+```{r}
+cities <- data.frame(
+  city = c("San Francisco", "Toronto", "Los Angeles", "Vancouver", "Seattle", "San Diego", "New York", "Washington DC", "Chicago"),
+  lat = c(37.773972, 43.639217, 34.052235, 49.246292, 47.608013, 32.715736, 40.730610, 38.930176, 41.881832),
+  long = c(-122.431297, -79.400414, -118.243683, -123.116226, -122.335167, -117.161087, -73.935242, -77.070503, -87.623177),
+  stringsAsFactors = FALSE
+)
+
+north_america + 
+  geom_point(data=cities, aes(x = long, y = lat), color="red", size = 2)
+```
+
+
