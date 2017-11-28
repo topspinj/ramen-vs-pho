@@ -16,8 +16,6 @@ usa <- map_data("usa")
 canada <- map_data("world", "canada")
 states <- map_data("state")
 north_america <- ggplot() + geom_polygon(data=states, aes(x = long, y = lat, group = group), color = "white", size=0.15, fill="#7f7f7f") + geom_polygon(data=canada, aes(x=long, y=lat, group = group), fill="#7f7f7f") +theme_classic() + coord_fixed(1.3)
-
-
 ```
 
 ```{r}
@@ -28,8 +26,13 @@ cities <- data.frame(
   stringsAsFactors = FALSE
 )
 
+count_data = read_csv("../../data/ramen_pho_count.csv")
+
+count_data_by_city = inner_join(count_data, cities)
+```
+```{r}
 north_america + 
-  geom_point(data=cities, aes(x = long, y = lat), color="red", size = 1) + theme(legend.position="none") + ggtitle("North American Cities with Ramen and Pho Restaurants")
+  geom_point(data=count_data_by_city, aes(x = long, y = lat, size=ramen_count), color="blue", alpha=0.3) + theme(legend.position="none") + ggtitle("North American Cities with Ramen and Pho Restaurants") 
 
 ggsave("../../results/north_america_map.png", width = 20, height = 20, units = "cm")
 ```
