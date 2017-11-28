@@ -29,7 +29,7 @@ cities <- data.frame(
 )
 
 north_america + 
-  geom_point(data=cities, aes(x = long, y = lat), color="red", size = 1) + theme(legend.position="none")
+  geom_point(data=cities, aes(x = long, y = lat), color="red", size = 1) + theme(legend.position="none") + ggtitle("North American Cities with Ramen and Pho Restaurants")
 
 ggsave("../../results/north_america_map.png", width = 20, height = 20, units = "cm")
 ```
