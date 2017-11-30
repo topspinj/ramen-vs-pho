@@ -2,3 +2,6 @@ src/.ipynb_checkpoints
 .Rproj.user
 src/ramen_vs_pho/.Rhistory
 src/ramen_vs_pho/.Rproj.user/
+src/yelp_fusion/config.py
+src/yelp_fusion/.vscode
+src/yelp_fusion/__pycache__
