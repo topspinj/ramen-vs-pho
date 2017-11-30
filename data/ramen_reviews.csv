@@ -1,0 +1,102 @@
+city,latitude,longitude,name,rank,rating,review_count,noodle_type
+Atlanta,33.8578,-84.38258,jinya-ramen-bar-atlanta-7,0,4.5,101,ramen
+Atlanta,33.800540094502104,-84.4084578752518,ginya-izakaya-atlanta-4,1,4.0,231,ramen
+Atlanta,33.9183699593665,-84.3773832515941,jinya-ramen-bar-sandy-springs,2,4.0,579,ramen
+Atlanta,33.8191873432516,-84.3497106029716,hajime-atlanta-3,3,3.5,300,ramen
+Atlanta,33.786349,-84.398266,wagaya-japanese-restaurant-westside-atlanta-4,4,4.0,336,ramen
+Boston,42.3484762870602,-71.0854271426797,santouka-back-bay-boston-2,0,4.0,261,ramen
+Boston,42.350970000000004,-71.05715,amateras-boston,1,4.5,57,ramen
+Boston,42.3722,-71.11582,hokkaido-ramen-santouka-cambridge-2,2,4.0,750,ramen
+Boston,42.343346999999994,-71.12349520000001,ganko-ittetsu-ramen-brookline,3,4.0,343,ramen
+Boston,42.3524485,-71.1254097,pikaichi-allston,4,4.0,547,ramen
+Chicago,41.919506299999995,-87.6915015,ramen-wasabi-chicago,0,4.0,1363,ramen
+Chicago,41.909968273207504,-87.6766849586083,furious-spoon-wicker-park-chicago,1,4.0,947,ramen
+Chicago,41.9087291,-87.6751408,kizuki-ramen-and-izakaya-chicago,2,4.0,369,ramen
+Chicago,41.883651,-87.64896800000001,high-five-ramen-chicago-4,3,4.0,533,ramen
+Chicago,41.889798,-87.63029300000001,ramen-san-chicago,4,3.5,1187,ramen
+Dallas,32.81241,-96.76975999999999,wabi-house-dallas,0,4.0,698,ramen
+Dallas,32.7693609001565,-96.83532537028928,ten-ramen-dallas,1,4.0,440,ramen
+Dallas,32.815181,-96.82769,ichiro-ramen-shop-dallas,2,4.0,202,ramen
+Dallas,32.784685700000004,-96.7828322,oni-ramen-dallas,3,4.0,79,ramen
+Dallas,32.782839214071004,-96.78366128472521,tanoshii-ramen-and-bar-dallas,4,3.0,510,ramen
+Denver,39.7621349,-105.0133389,uncle-denver,0,4.0,850,ramen
+Denver,39.75954,-104.98608999999999,osaka-ramen-denver,1,4.0,292,ramen
+Denver,39.7618827819824,-105.03401184081999,seras-ramen-enclave-denver-2,2,4.0,169,ramen
+Denver,39.739864881803605,-104.982504062355,tycoon-ramen-and-sushi-denver,3,4.0,141,ramen
+Denver,39.74716,-104.99428999999999,menya-noodle-bar-denver,4,4.0,225,ramen
+Houston,29.742860600000004,-95.379739,jinya-ramen-bar-houston-3,0,4.5,1825,ramen
+Houston,29.7433,-95.39833,ramen-tatsu-ya-houston,1,3.5,465,ramen
+Houston,29.747365248717397,-95.60508459806441,ramen-bar-ichi-houston,2,4.5,298,ramen
+Houston,29.7884065,-95.4678997,tamashi-ramen-and-sushi-houston-6,3,4.0,114,ramen
+Houston,29.776484600000003,-95.41122929999999,samurai-noodle-houston,4,4.0,466,ramen
+Las Vegas,36.1263223,-115.2099104,monta-ramen-las-vegas-2,0,4.0,2269,ramen
+Las Vegas,36.126455,-115.201851,ramen-sora-las-vegas,1,4.0,1161,ramen
+Las Vegas,36.1156749,-115.20695249999999,jinya-ramen-bar-las-vegas,2,4.0,1153,ramen
+Las Vegas,36.100629999999995,-115.11752,fukumimi-ramen-las-vegas,3,4.0,732,ramen
+Las Vegas,36.1277049709772,-115.22405403651699,ramen-tatsu-las-vegas,4,4.5,388,ramen
+Los Angeles,34.049999,-118.24006999999999,daikokuya-little-tokyo-los-angeles,0,4.0,7184,ramen
+Los Angeles,34.0573614429986,-118.30676974470501,slurpin-ramen-bar-los-angeles,1,4.5,1920,ramen
+Los Angeles,34.083710700000005,-118.34467590000001,tatsu-ramen-los-angeles-4,2,4.0,2170,ramen
+Los Angeles,34.0835268538041,-118.273676509195,silverlake-ramen-los-angeles,3,4.0,2272,ramen
+Los Angeles,34.004959899999996,-118.43359,hokkaido-ramen-santouka-los-angeles,4,4.5,2041,ramen
+Miami,25.749975375271603,-80.2608069693115,ichimi-coral-gables,0,4.0,386,ramen
+Miami,25.768320000000003,-80.190789,satsuma-shimuja-miami,1,4.0,164,ramen
+Miami,25.7635371,-80.193277,momi-ramen-miami,2,3.0,539,ramen
+Miami,25.71667,-80.2738,ohho-noodles-market-coral-gables,3,4.0,136,ramen
+Miami,25.79526,-80.12884,k-ramen-burger-beer-miami-beach-5,4,4.0,138,ramen
+Minneapolis,44.941078186035206,-93.2781982421875,ramen-kazama-minneapolis,0,4.0,241,ramen
+Minneapolis,44.9534706557005,-93.278125129286,ichiddo-ramen-minneapolis,1,4.0,127,ramen
+Minneapolis,44.9784334,-93.25961720000001,zen-box-izakaya-minneapolis,2,4.0,373,ramen
+Minneapolis,44.957817616666695,-93.2423242562752,unideli-minneapolis,3,3.5,172,ramen
+Minneapolis,44.94632194458071,-93.13664319305279,tori-ramen-saint-paul,4,4.0,149,ramen
+Montreal,45.521220616437795,-73.578518757916,yokato-yokabai-montréal-3,0,4.5,248,ramen
+Montreal,45.49601,-73.57486999999999,kinton-ramen-montréal,1,4.0,116,ramen
+Montreal,45.49263,-73.58100999999999,ichifuku-montréal,2,3.5,76,ramen
+Montreal,45.492971934241,-73.580088453534,kazu-montréal-2,3,4.5,546,ramen
+Montreal,45.5184967,-73.5831113,ramen-ya-montréal-2,4,3.5,78,ramen
+New York,40.7643285462369,-73.9876558773155,totto-ramen-new-york,0,4.0,4521,ramen
+New York,40.730922,-73.990167,ippudo-east-village-new-york,1,4.0,9009,ramen
+New York,40.763542,-73.986542,ippudo-westside-new-york,2,4.0,2853,ramen
+New York,40.72412,-73.98288000000001,minca-new-york,3,4.0,1496,ramen
+New York,40.749927,-73.977462,momosan-ramen-and-sake-new-york-2,4,4.0,971,ramen
+Philadelphia,39.9553986,-75.15448,terakawa-ramen-philadelphia,0,4.0,1003,ramen
+Philadelphia,39.9534149169922,-75.1575012207031,yamitsuki-ramen-philadelphia,1,4.0,227,ramen
+Philadelphia,39.95001,-75.158862,hiro-ramen-house-philadelphia,2,4.0,270,ramen
+Philadelphia,39.94679489999999,-75.1577025,cheu-noodle-bar-philadelphia,3,4.0,662,ramen
+Philadelphia,40.025762,-75.223853,ramen-philadelphia,4,4.0,54,ramen
+Phoenix,33.44945,-112.07558,noodle-bar-phoenix,0,4.0,250,ramen
+Phoenix,33.5098020415682,-112.061086646033,cherryblossom-noodle-cafe-phoenix,1,4.0,939,ramen
+Phoenix,33.5828804,-112.15139509999999,yakiramen-phoenix,2,4.0,62,ramen
+Tempe,33.3937812,-111.90858229999999,tampopo-ramen-tempe,3,4.0,456,ramen
+Phoenix,33.4587456623854,-112.077205393404,sosoba-phoenix,4,3.5,123,ramen
+Portland,45.5214296898768,-122.672522000093,marukin-ramen-portland-2,0,4.0,264,ramen
+Portland,45.522407,-122.65937,marukin-ramen-portland,1,4.0,291,ramen
+Portland,45.521744,-122.802035,kizuki-ramen-and-izakaya-portland-2,2,4.0,575,ramen
+Portland,45.550289899999996,-122.66641000000001,kayos-ramen-bar-portland,3,4.0,184,ramen
+Portland,45.516020000000005,-122.65903999999999,afuri-portland-7,4,4.0,296,ramen
+San Diego,32.8247046211958,-117.155484105488,rakiraki-ramen-and-tsukemen-san-diego,0,4.0,2227,ramen
+San Diego,32.825531,-117.1544185,tajima-ramen-house-san-diego-10,1,4.0,3378,ramen
+San Diego,32.83231,-117.14708999999999,menya-ultra-san-diego,2,4.0,521,ramen
+San Diego,32.8196793,-117.1499863,nishiki-ramen-san-diego,3,4.0,900,ramen
+San Diego,32.8354843938435,-117.189094190625,ramen-yamadaya-san-diego,4,4.0,1158,ramen
+San Francisco,37.785233700000006,-122.4315788,marufuku-ramen-san-francisco,0,4.5,604,ramen
+San Francisco,37.7866908459856,-122.414326295257,mensho-tokyo-san-francisco-2,1,4.0,1135,ramen
+San Francisco,37.763878999999996,-122.47413,izakaya-sozai-san-francisco,2,4.0,1838,ramen
+San Francisco,37.786157463801395,-122.430057115853,hinodeya-ramen-bar-san-francisco,3,4.0,423,ramen
+San Francisco,37.787259999999996,-122.41037,katana-ya-san-francisco,4,3.5,3863,ramen
+St Petersburg,27.7711891382933,-82.6469506323338,buya-st-petersburg,3,4.0,264,ramen
+Toronto,43.655,-79.38643,sansotei-ramen-toronto-2,0,4.0,692,ramen
+Toronto,43.65634,-79.40689,ramen-isshin-toronto,1,4.5,345,ramen
+Toronto,43.65632173139301,-79.377499580039,hokkaido-ramen-santouka-toronto-2,2,4.0,641,ramen
+Toronto,43.666819017364205,-79.38546924903271,sansotei-toronto,3,4.0,203,ramen
+Toronto,43.6603113,-79.3789004,kinton-ramen-toronto-16,4,4.0,123,ramen
+Vancouver,49.290236,-123.13381100000001,hokkaido-ramen-santouka-vancouver,0,4.0,789,ramen
+Vancouver,49.2905691,-123.13339509999999,marutama-ramen-vancouver,1,4.0,375,ramen
+Vancouver,49.2874959131639,-123.128934167326,ramen-danbo-vancouver,2,4.0,175,ramen
+Vancouver,49.263127000000004,-123.11689170000001,hokkaido-ramen-santouka-vancouver-5,3,4.0,90,ramen
+Vancouver,49.2803833,-123.11855859999999,yah-yah-ya-ramen-vancouver,4,4.0,68,ramen
+"Washington, DC",38.8986,-77.01958990000001,daikaya-ramen-shop-washington-2,0,4.0,2092,ramen
+"Washington, DC",38.9216012545356,-77.04208840615159,sakuramen-washington,1,4.0,1270,ramen
+"Washington, DC",38.9002596732333,-76.9890601862829,toki-underground-washington,2,4.0,1815,ramen
+"Washington, DC",38.8986,-77.01958990000001,daikaya-izakaya-washington-8,3,4.0,565,ramen
+"Washington, DC",38.908429999999996,-77.03219,jinya-ramen-bar-washington-2,4,4.0,138,ramen
