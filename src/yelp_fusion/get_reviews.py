@@ -57,7 +57,7 @@ GRANT_TYPE = 'client_credentials'
 DEFAULT_TERM = 'dinner'
 DEFAULT_LOCATION = 'San Francisco, CA'
 DEFAULT_FILE_NAME = 'san_fran_dinner'
-SEARCH_LIMIT = 10
+SEARCH_LIMIT = 15
 
 
 def obtain_bearer_token(host, path):

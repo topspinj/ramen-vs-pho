@@ -92,4 +92,9 @@ ramen_reviews = read_csv("../../data/reviews/ramen.csv")
 ramen_reviews <- ramen_reviews %>% 
   filter(city != 'city') %>% 
   select(city, name, rank, review_count, food_type)
+
+new_york_ramen <- ramen_reviews %>% 
+  filter(city == "New York, New York")
+new_york_pho <- pho_reviews %>% 
+  filter(city == "New York, New York")
 ```
