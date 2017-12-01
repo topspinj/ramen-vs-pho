@@ -160,7 +160,6 @@ def query_api(term, location, file_name):
     bearer_token = obtain_bearer_token(API_HOST, TOKEN_PATH)
 
     response = search(bearer_token, term, location)
-    pprint.pprint(response, indent=2)
 
     businesses = response.get('businesses')
 
@@ -192,7 +191,8 @@ def query_api(term, location, file_name):
         longitude.append(response['coordinates']['longitude'])
         review_count.append(response['review_count'])
         rating.append(response['rating'])
-        city.append(response['location']['city'])
+        city.append(location)
+        food_type.append(term)
 
     restos = {
         'rating': rating,
@@ -201,8 +201,8 @@ def query_api(term, location, file_name):
         'longitude': longitude,
         'name': resto_name,
         'rank': rank,
-        'city': location,
-        'food_type': term
+        'city': city,
+        'food_type': food_type
     }
     pd.DataFrame(restos).to_csv(u'../../data/reviews/{0}.csv'.format(file_name))
 
@@ -222,8 +222,28 @@ def main():
 
     input_values = parser.parse_args()
 
+    city_args = [
+        {'city': 'San Francisco, CA', 'name': 'san_fran'},
+        {'city': 'Toronto, Ontario', 'name': 'toronto'},
+        {'city': 'Vancouver, British Columbia', 'name': 'vancouver'},
+        {'city': 'Montreal, Quebec', 'name': 'montreal'},
+        {'city': 'Los Angeles, CA', 'name': 'los_angeles'},
+        {'city': 'San Diego, CA', 'name': 'san_diego'},
+        {'city': 'Miami, Florida', 'name': 'miami'},
+        {'city': 'Denver, Colorado', 'name': 'denver'},
+        {'city': 'New York, New York', 'name': 'new_york'},
+        {'city': 'Chicago, Illinois', 'name': 'chicago'},
+        {'city': 'Seattle, Washington', 'name': 'seattle'},
+        {'city': 'Washington, DC', 'name': 'washington_dc'}
+        ]
+
     try:
-        query_api(input_values.term, input_values.location, input_values.file_name)
+        for i in city_args:
+            for j in ['ramen', 'pho']:
+                location = i['city']
+                file_name = i['name']+"_"+j
+                term = j
+                query_api(term, location, file_name)
     except HTTPError as error:
         sys.exit(
             'Encountered HTTP error {0} on {1}:\n {2}\nAbort program.'.format(
