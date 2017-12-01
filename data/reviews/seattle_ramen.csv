@@ -1,6 +1,6 @@
 ,city,food_type,latitude,longitude,name,rank,rating,review_count
 0,"Seattle, Washington",ramen,47.6155242919922,-122.3271484375,kizuki-ramen-and-izakaya-seattle-6,0,4.0,723
-1,"Seattle, Washington",ramen,47.61548,-122.31594,ramen-danbo-seattle-2,1,4.5,45
+1,"Seattle, Washington",ramen,47.61548,-122.31594,ramen-danbo-seattle-2,1,4.5,48
 2,"Seattle, Washington",ramen,47.6135201,-122.3219651,ooink-seattle,2,4.0,220
 3,"Seattle, Washington",ramen,47.7214454316066,-122.296077806746,aloha-ramen-seattle,3,4.0,694
 4,"Seattle, Washington",ramen,47.6132958132324,-122.319609959972,betsutenjin-seattle,4,4.0,74

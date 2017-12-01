@@ -234,7 +234,15 @@ def main():
         {'city': 'New York, New York', 'name': 'new_york'},
         {'city': 'Chicago, Illinois', 'name': 'chicago'},
         {'city': 'Seattle, Washington', 'name': 'seattle'},
-        {'city': 'Washington, DC', 'name': 'washington_dc'}
+        {'city': 'Washington, DC', 'name': 'washington_dc'},
+        {'city': 'Minneapolis, Minnesota', 'name': 'minnieapolis'},
+        {'city': 'Houston, Texas', 'name': 'houston'},
+        {'city': 'Phoenix, Arizona', 'name': 'phoenix'},
+        {'city': 'Portland, Oregon', 'name': 'portland'},
+        {'city': 'Philadelphia, Pennsylvania', 'name': 'philadelphia'},
+        {'city': 'Atlanta, Georgia', 'name': 'atlanta'},
+        {'city': 'Boston, Massachussetts', 'name': 'boston'},
+        {'city': 'Las Vegas, Nevada', 'name': 'las_vegas'}
         ]
 
     try:

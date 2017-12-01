@@ -1,6 +1,6 @@
 ,city,food_type,latitude,longitude,name,rank,rating,review_count
-0,"Denver, Colorado",pho,39.6910552978516,-105.025489807129,pho-95-denver,0,4.5,1067
+0,"Denver, Colorado",pho,39.6910552978516,-105.025489807129,pho-95-denver,0,4.5,1068
 1,"Denver, Colorado",pho,39.74026,-104.98407,pho-natic-denver-2,1,4.0,428
 2,"Denver, Colorado",pho,39.69648,-105.02466,pho-96-denver,2,4.5,246
-3,"Denver, Colorado",pho,39.71098,-104.98073,pho-haus-denver-3,3,5.0,23
+3,"Denver, Colorado",pho,39.71098,-104.98073,pho-haus-denver-3,3,5.0,24
 4,"Denver, Colorado",pho,39.7255825,-104.971131,pho-on-6th-denver,4,3.0,440
