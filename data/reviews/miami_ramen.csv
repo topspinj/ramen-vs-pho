@@ -1,0 +1,6 @@
+,city,food_type,latitude,longitude,name,rank,rating,review_count
+0,"Miami, Florida",ramen,25.7499753752716,-80.2608069693115,ichimi-coral-gables,0,4.0,391
+1,"Miami, Florida",ramen,25.7635371,-80.193277,momi-ramen-miami,1,3.0,539
+2,"Miami, Florida",ramen,25.71667,-80.2738,ohho-noodles-market-coral-gables,2,4.0,137
+3,"Miami, Florida",ramen,25.79526,-80.12884,k-ramen-burger-beer-miami-beach-5,3,4.0,145
+4,"Miami, Florida",ramen,25.8098,-80.19559,gaijin-izakaya-by-cake-miami,4,4.0,65

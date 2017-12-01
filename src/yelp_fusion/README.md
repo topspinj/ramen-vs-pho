@@ -16,5 +16,7 @@ for more details.
 To install the dependencies, run:
 `pip install -r requirements.txt`.
 
-Run the code sample without specifying any arguments:
+Run script:
 `python get_reviews.py`
+
+The output csv files are located in **../../data/reviews/**.

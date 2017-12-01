@@ -1,0 +1,6 @@
+,city,food_type,latitude,longitude,name,rank,rating,review_count
+0,"Miami, Florida",pho,25.6989235,-80.3823149,siam-bistro-miami,0,4.0,181
+1,"Miami, Florida",pho,25.6825858416345,-80.313448251136,miss-saigon-bistro-pinecrest,1,4.0,323
+2,"Miami, Florida",pho,25.7512718439102,-80.2576891332865,miss-saigon-bistro-coral-gables,2,3.5,183
+3,"Miami, Florida",pho,25.93248,-80.15386,phomi2go-north-miami-beach-2,3,4.5,250
+4,"Miami, Florida",pho,25.6202555010309,-80.347032174468,pho-thang-restaurant-palmetto-bay,4,3.5,222

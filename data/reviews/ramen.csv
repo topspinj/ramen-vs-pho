@@ -1,0 +1,66 @@
+,city,food_type,latitude,longitude,name,rank,rating,review_count
+0,"Chicago, Illinois",ramen,41.9195063,-87.6915015,ramen-wasabi-chicago,0,4.0,1368
+1,"Chicago, Illinois",ramen,41.9099682732075,-87.6766849586083,furious-spoon-wicker-park-chicago,1,4.0,952
+2,"Chicago, Illinois",ramen,41.9087291,-87.6751408,kizuki-ramen-and-izakaya-chicago,2,4.0,379
+3,"Chicago, Illinois",ramen,41.883651,-87.648968,high-five-ramen-chicago-4,3,4.0,534
+4,"Chicago, Illinois",ramen,41.889798,-87.630293,ramen-san-chicago,4,3.5,1192
+,city,food_type,latitude,longitude,name,rank,rating,review_count
+0,"Denver, Colorado",ramen,39.7621349,-105.0133389,uncle-denver,0,4.0,852
+1,"Denver, Colorado",ramen,39.75954,-104.98609,osaka-ramen-denver,1,4.0,293
+2,"Denver, Colorado",ramen,39.7618827819824,-105.03401184082,seras-ramen-enclave-denver-2,2,4.0,172
+3,"Denver, Colorado",ramen,39.7398648818036,-104.982504062355,tycoon-ramen-and-sushi-denver,3,4.0,143
+4,"Denver, Colorado",ramen,39.74716,-104.99429,menya-noodle-bar-denver,4,4.0,228
+,city,food_type,latitude,longitude,name,rank,rating,review_count
+0,"Los Angeles, CA",ramen,34.049999,-118.24007,daikokuya-little-tokyo-los-angeles,0,4.0,7198
+1,"Los Angeles, CA",ramen,34.0573614429986,-118.306769744705,slurpin-ramen-bar-los-angeles,1,4.5,1941
+2,"Los Angeles, CA",ramen,34.0837107,-118.3446759,tatsu-ramen-los-angeles-4,2,4.0,2188
+3,"Los Angeles, CA",ramen,34.0835268538041,-118.273676509195,silverlake-ramen-los-angeles,3,4.0,2282
+4,"Los Angeles, CA",ramen,34.0049599,-118.43359,hokkaido-ramen-santouka-los-angeles,4,4.5,2046
+,city,food_type,latitude,longitude,name,rank,rating,review_count
+0,"Miami, Florida",ramen,25.7499753752716,-80.2608069693115,ichimi-coral-gables,0,4.0,391
+1,"Miami, Florida",ramen,25.7635371,-80.193277,momi-ramen-miami,1,3.0,539
+2,"Miami, Florida",ramen,25.71667,-80.2738,ohho-noodles-market-coral-gables,2,4.0,137
+3,"Miami, Florida",ramen,25.79526,-80.12884,k-ramen-burger-beer-miami-beach-5,3,4.0,145
+4,"Miami, Florida",ramen,25.8098,-80.19559,gaijin-izakaya-by-cake-miami,4,4.0,65
+,city,food_type,latitude,longitude,name,rank,rating,review_count
+0,"Montreal, Quebec",ramen,45.5212206164378,-73.578518757916,yokato-yokabai-montréal-3,0,4.0,250
+1,"Montreal, Quebec",ramen,45.49601,-73.57487,kinton-ramen-montréal,1,4.0,117
+2,"Montreal, Quebec",ramen,45.49263,-73.58101,ichifuku-montréal,2,3.5,77
+3,"Montreal, Quebec",ramen,45.492971934241,-73.580088453534,kazu-montréal-2,3,4.5,549
+4,"Montreal, Quebec",ramen,45.5184967,-73.5831113,ramen-ya-montréal-2,4,3.5,78
+,city,food_type,latitude,longitude,name,rank,rating,review_count
+0,"New York, New York",ramen,40.7643285462369,-73.9876558773155,totto-ramen-new-york,0,4.0,4532
+1,"New York, New York",ramen,40.730922,-73.990167,ippudo-east-village-new-york,1,4.0,9022
+2,"New York, New York",ramen,40.763542,-73.986542,ippudo-westside-new-york,2,4.0,2869
+3,"New York, New York",ramen,40.749927,-73.977462,momosan-ramen-and-sake-new-york-2,3,4.0,985
+4,"New York, New York",ramen,40.72412,-73.98288,minca-new-york,4,4.0,1498
+,city,food_type,latitude,longitude,name,rank,rating,review_count
+0,"San Diego, CA",ramen,32.8247046211958,-117.155484105488,rakiraki-ramen-and-tsukemen-san-diego,0,4.0,2237
+1,"San Diego, CA",ramen,32.825531,-117.1544185,tajima-ramen-house-san-diego-10,1,4.0,3387
+2,"San Diego, CA",ramen,32.83231,-117.14709,menya-ultra-san-diego,2,4.0,527
+3,"San Diego, CA",ramen,32.8196793,-117.1499863,nishiki-ramen-san-diego,3,4.0,906
+4,"San Diego, CA",ramen,32.8354843938435,-117.189094190625,ramen-yamadaya-san-diego,4,4.0,1159
+,city,food_type,latitude,longitude,name,rank,rating,review_count
+0,"San Francisco, CA",ramen,37.7852337,-122.4315788,marufuku-ramen-san-francisco,0,4.5,623
+1,"San Francisco, CA",ramen,37.7866908459856,-122.414326295257,mensho-tokyo-san-francisco-2,1,4.0,1153
+2,"San Francisco, CA",ramen,37.763879,-122.47413,izakaya-sozai-san-francisco,2,4.0,1842
+3,"San Francisco, CA",ramen,37.7861574638014,-122.430057115853,hinodeya-ramen-bar-san-francisco,3,4.0,428
+4,"San Francisco, CA",ramen,37.78726,-122.41037,katana-ya-san-francisco,4,3.5,3870
+,city,food_type,latitude,longitude,name,rank,rating,review_count
+0,"Seattle, Washington",ramen,47.6155242919922,-122.3271484375,kizuki-ramen-and-izakaya-seattle-6,0,4.0,723
+1,"Seattle, Washington",ramen,47.61548,-122.31594,ramen-danbo-seattle-2,1,4.5,45
+2,"Seattle, Washington",ramen,47.6135201,-122.3219651,ooink-seattle,2,4.0,220
+3,"Seattle, Washington",ramen,47.7214454316066,-122.296077806746,aloha-ramen-seattle,3,4.0,694
+4,"Seattle, Washington",ramen,47.6132958132324,-122.319609959972,betsutenjin-seattle,4,4.0,74
+,city,food_type,latitude,longitude,name,rank,rating,review_count
+0,"Toronto, Ontario",ramen,43.655,-79.38643,sansotei-ramen-toronto-2,0,4.0,699
+1,"Toronto, Ontario",ramen,43.65634,-79.40689,ramen-isshin-toronto,1,4.5,349
+2,"Toronto, Ontario",ramen,43.656321731393,-79.377499580039,hokkaido-ramen-santouka-toronto-2,2,4.0,645
+3,"Toronto, Ontario",ramen,43.6668190173642,-79.3854692490327,sansotei-toronto,3,4.0,204
+4,"Toronto, Ontario",ramen,43.6603113,-79.3789004,kinton-ramen-toronto-16,4,4.0,121
+,city,food_type,latitude,longitude,name,rank,rating,review_count
+0,"Washington, DC",ramen,38.8986,-77.0195899,daikaya-ramen-shop-washington-2,0,4.0,2096
+1,"Washington, DC",ramen,38.9216012545356,-77.0420884061516,sakuramen-washington,1,4.0,1273
+2,"Washington, DC",ramen,38.9002596732333,-76.9890601862829,toki-underground-washington,2,4.0,1821
+3,"Washington, DC",ramen,38.8986,-77.0195899,daikaya-izakaya-washington-8,3,4.0,568
+4,"Washington, DC",ramen,38.90843,-77.03219,jinya-ramen-bar-washington-2,4,4.0,150
