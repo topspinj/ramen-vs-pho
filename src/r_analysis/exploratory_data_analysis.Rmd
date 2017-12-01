@@ -77,4 +77,19 @@ plot_grid(us_ramen, us_pho, canada_ramen, canada_pho)
 ggsave("../../results/north_america_ramen_pho.png", width = 20, height = 20, units = "cm")
 ```
 
+```{r}
+t.test(x=count_data$ramen_count, y=count_data$pho_count, paired=TRUE)
+```
+```{r}
+pho_reviews = read_csv("../../data/reviews/pho.csv")
 
+pho_reviews <- pho_reviews %>% 
+  filter(city != 'city') %>% 
+  select(city, name, rank, review_count, food_type)
+
+ramen_reviews = read_csv("../../data/reviews/ramen.csv")
+
+ramen_reviews <- ramen_reviews %>% 
+  filter(city != 'city') %>% 
+  select(city, name, rank, review_count, food_type)
+```
