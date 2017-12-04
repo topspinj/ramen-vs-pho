@@ -97,4 +97,6 @@ new_york_ramen <- ramen_reviews %>%
   filter(city == "New York, New York")
 new_york_pho <- pho_reviews %>% 
   filter(city == "New York, New York")
+
+new_york_pho
 ```
