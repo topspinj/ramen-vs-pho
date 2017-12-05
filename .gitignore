@@ -5,3 +5,5 @@ src/ramen_vs_pho/.Rproj.user/
 src/yelp_fusion/config.py
 src/yelp_fusion/.vscode
 src/yelp_fusion/__pycache__
+src/r_analysis/packrat/lib*/
+src/r_analysis/packrat/src/
