@@ -58,6 +58,11 @@ Version: 0.2
 Hash: 7f7dcd1dc351f84798fd3dc4eb8a0e78
 Requires: Rcpp, bindr, plogr
 
+Package: bitops
+Source: CRAN
+Version: 1.0-6
+Hash: 67d0775189fd0041d95abca618c5c07e
+
 Package: broom
 Source: CRAN
 Version: 0.4.2
@@ -119,6 +124,11 @@ Package: foreign
 Source: CRAN
 Version: 0.8-69
 Hash: 6cb09ceba757189aff90eb9bb72c8983
+
+Package: formatR
+Source: CRAN
+Version: 1.5
+Hash: 258cf79a8dbeedf1c981cdb53837d2af
 
 Package: ggplot2
 Source: CRAN
