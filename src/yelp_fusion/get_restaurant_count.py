@@ -166,16 +166,21 @@ def query_api(term, location, file_name):
     if not businesses:
         print(u'No businesses for {0} in {1} found.'.format(term, location))
         return
+    
 
+    city = []
     restaurant_count = []
     food_type = []
 
+    city.append(location)
     restaurant_count.append(response['total'])
     food_type.append(term)
 
     restos = {
+  
         'restaurant_count': restaurant_count,
-        'food_type': food_type
+        'food_type': food_type,
+        'city': city
     }
     pd.DataFrame(restos).to_csv(u'../../data/restaurant_counts/{0}_count.csv'.format(file_name))
 
