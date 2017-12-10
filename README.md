@@ -31,3 +31,8 @@ Ramen is more popular than pho in North America.
 - compare number of pho vs. ramen restaurants in 30 cities (use paired t-test)
 - compare total number of reviews for top 5 pho and ramen restaurants 
 - map pho vs. ramen data for each city on map of North America (ggplot2?)
+
+
+### Results
+
+You can see a report of the analysis [here](doc/report.md).
