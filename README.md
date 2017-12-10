@@ -2,6 +2,9 @@
 
 This project investigates the popularity of pho and ramen in major cities across North America.
 
+![](data/battle-of-pho-vs-ramen.png)
+
+
 ### Question
 
 Which is more popular: pho or ramen? 
