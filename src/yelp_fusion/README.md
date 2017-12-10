@@ -18,7 +18,7 @@ for more details.
 
 ### Run script:
 
-* Important: you will need to create a config file to store your Yelp API client ID and secret in order for the API to work
+* Important: you will need to create a config file to store your Yelp API client ID and secret in order for the API to work. You can get these [here](https://www.yelp.com/developers/documentation/v3/authentication).
 
 
 To get top 5 ramen and pho restaurant data for each city, run this script:
