@@ -9,3 +9,4 @@ src/r_analysis/packrat/lib*/
 src/r_analysis/packrat/src/
 data/reviews/
 data/restaurant_counts/
+data/google_trends_by_city/
