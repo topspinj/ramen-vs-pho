@@ -177,7 +177,7 @@ def query_api(term, location, file_name):
         'restaurant_count': restaurant_count,
         'food_type': food_type
     }
-    pd.DataFrame(restos).to_csv(u'../../data/reviews/{0}_count.csv'.format(file_name))
+    pd.DataFrame(restos).to_csv(u'../../data/restaurant_counts/{0}_count.csv'.format(file_name))
 
 
 

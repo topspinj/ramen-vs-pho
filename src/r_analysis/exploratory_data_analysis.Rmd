@@ -80,23 +80,20 @@ ggsave("../../results/north_america_ramen_pho.png", width = 20, height = 20, uni
 ```{r}
 t.test(x=count_data$ramen_count, y=count_data$pho_count, paired=TRUE)
 ```
-```{r}
+```{r warning=FALSE, message=FALSE}
 pho_reviews = read_csv("../../data/reviews/pho.csv")
 
 pho_reviews <- pho_reviews %>% 
   filter(city != 'city') %>% 
-  select(city, name, rank, review_count, food_type)
+  select(city, review_count, food_type)
 
 ramen_reviews = read_csv("../../data/reviews/ramen.csv")
 
 ramen_reviews <- ramen_reviews %>% 
   filter(city != 'city') %>% 
-  select(city, name, rank, review_count, food_type)
+  select(city, review_count, food_type)
 
-new_york_ramen <- ramen_reviews %>% 
-  filter(city == "New York, New York")
-new_york_pho <- pho_reviews %>% 
-  filter(city == "New York, New York")
+anti_join( pho_reviews, ramen_reviews, by="city")
 
-new_york_pho
+
 ```
