@@ -1,36 +1,24 @@
-,food_type,restaurant_count
-0,ramen,234
-,food_type,restaurant_count
-0,ramen,249
-,food_type,restaurant_count
-0,ramen,430
-,food_type,restaurant_count
-0,ramen,230
-,food_type,restaurant_count
-0,ramen,287
-,food_type,restaurant_count
-0,ramen,1800
-,food_type,restaurant_count
-0,ramen,144
-,food_type,restaurant_count
-0,ramen,95
-,food_type,restaurant_count
-0,ramen,97
-,food_type,restaurant_count
-0,ramen,1500
-,food_type,restaurant_count
-0,ramen,177
-,food_type,restaurant_count
-0,ramen,229
-,food_type,restaurant_count
-0,ramen,410
-,food_type,restaurant_count
-0,ramen,880
-,food_type,restaurant_count
-0,ramen,383
-,food_type,restaurant_count
-0,ramen,314
-,food_type,restaurant_count
-0,ramen,306
-,food_type,restaurant_count
-0,ramen,288
+,city,food_type,restaurant_count
+0,"Chicago, Illinois",ramen,431
+,city,food_type,restaurant_count
+0,"Los Angeles, CA",ramen,1800
+,city,food_type,restaurant_count
+0,"Miami, Florida",ramen,144
+,city,food_type,restaurant_count
+0,"Minneapolis, Minnesota",ramen,95
+,city,food_type,restaurant_count
+0,"Montreal, Quebec",ramen,97
+,city,food_type,restaurant_count
+0,"New York, New York",ramen,1500
+,city,food_type,restaurant_count
+0,"San Diego, CA",ramen,410
+,city,food_type,restaurant_count
+0,"San Francisco, CA",ramen,880
+,city,food_type,restaurant_count
+0,"Seattle, Washington",ramen,383
+,city,food_type,restaurant_count
+0,"Toronto, Ontario",ramen,314
+,city,food_type,restaurant_count
+0,"Vancouver, British Columbia",ramen,306
+,city,food_type,restaurant_count
+0,"Washington, DC",ramen,288

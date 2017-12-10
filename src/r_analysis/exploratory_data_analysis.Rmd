@@ -1,11 +1,11 @@
 ---
-title: "exploratory_data_analysis"
+title: "Exploratory Data Analysis"
 author: "Jill Cates"
 date: '2017-11-27'
 output: html_document
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, warning=FALSE, message=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(maps)
@@ -13,6 +13,8 @@ library(cowplot)
 ```
 
 ```{r}
+count_data = read_csv("../../data/ramen_pho_count.csv")
+
 usa <- map_data("usa")
 canada <- map_data("world", "canada")
 states <- map_data("state")
@@ -29,8 +31,6 @@ cities <- data.frame(
   long = c(-122.431297, -79.400414, -118.243683, -123.116226, -122.335167, -117.161087, -73.935242, -77.070503, -87.623177, -115.172813, -71.057083, -95.369957, -122.676483, -84.386330, -75.165222, -112.074036, -80.191788, -104.991531, -97.040443, -80.843124, -93.258133, -73.5673),
   stringsAsFactors = FALSE
 )
-
-count_data = read_csv("../../data/ramen_pho_count.csv")
 
 count_data_by_city = inner_join(count_data, cities)
 
@@ -80,14 +80,21 @@ ggsave("../../results/north_america_ramen_pho.png", width = 20, height = 20, uni
 ```{r}
 t.test(x=count_data$ramen_count, y=count_data$pho_count, paired=TRUE)
 ```
+
+
+
+
+
+
+
 ```{r warning=FALSE, message=FALSE}
-pho_reviews = read_csv("../../data/reviews/pho.csv")
+pho_reviews = read_csv("../../data/reviews/pho_reviews.csv")
 
 pho_reviews <- pho_reviews %>% 
   filter(city != 'city') %>% 
   select(city, review_count, food_type)
 
-ramen_reviews = read_csv("../../data/reviews/ramen.csv")
+ramen_reviews = read_csv("../../data/reviews/ramen_reviews.csv")
 
 ramen_reviews <- ramen_reviews %>% 
   filter(city != 'city') %>% 
