@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-<title></title>
+<title>Figure 1: a bar plot comparing ramen vs pho restaurant counts across cities.</title>
 
 <script type="text/javascript">
 window.onload = function() {
@@ -201,10 +201,56 @@ hr {
 </head>
 
 <body>
+<h3>Figure 1: a bar plot comparing ramen vs pho restaurant counts across cities.</h3>
+
 <pre><code class="r">count_data = read_csv(&quot;../../data/ramen_pho_count.csv&quot;)
 </code></pre>
 
 <pre><code>## Error: &#39;../../data/ramen_pho_count.csv&#39; does not exist in current working directory (&#39;/Users/jillcates/Dev/mds/block3/DSCI-522/labs/ramen-vs-pho&#39;).
+</code></pre>
+
+<pre><code class="r">melted_count_data &lt;- melt(count_data, id=c(&quot;city&quot;, &quot;state&quot;, &quot;country&quot;), value.name=&quot;count&quot;) 
+</code></pre>
+
+<pre><code>## Error in melt(count_data, id = c(&quot;city&quot;, &quot;state&quot;, &quot;country&quot;), value.name = &quot;count&quot;): object &#39;count_data&#39; not found
+</code></pre>
+
+<pre><code class="r">melted_count_data$variable &lt;- melted_count_data$variable %&gt;% 
+  fct_recode(&quot;ramen&quot; = &quot;ramen_count&quot;, &quot;pho&quot; = &quot;pho_count&quot;) 
+</code></pre>
+
+<pre><code>## Error in eval(lhs, parent, parent): object &#39;melted_count_data&#39; not found
+</code></pre>
+
+<pre><code class="r">ggplot(melted_count_data) + 
+  geom_bar(aes(x=fct_reorder(city, count, .desc=TRUE), y=count, fill=variable), position=&quot;dodge&quot;, stat=&quot;identity&quot;) +
+  scale_fill_discrete(name=&quot;restaurant type&quot;) +
+  xlab(&quot;city&quot;) +
+  ggtitle(&quot;Ramen and Pho Restaurants by City&quot;) +
+  theme_classic() +
+  theme(legend.justification=c(&quot;right&quot;, &quot;top&quot;),
+        legend.box.just=&quot;right&quot;,
+        legend.position=c(0.95,0.95),
+        legend.title=element_text(face=&quot;bold&quot;),
+        axis.text.x = element_text(angle = 90, hjust = 1, size=8),
+        plot.title = element_text(face=&quot;bold&quot;, size=14))
+</code></pre>
+
+<pre><code>## Error in ggplot(melted_count_data): object &#39;melted_count_data&#39; not found
+</code></pre>
+
+<pre><code class="r">ggsave(&quot;../../results/ramen_pho_restaurants_by_city.png&quot;, width = 30, height = 20, units = &quot;cm&quot;)
+</code></pre>
+
+<h3>Figure 2: a map of ramen and pho restaurant frequency in North America</h3>
+
+<pre><code class="r">percent_count_data &lt;- count_data %&gt;% 
+  mutate(total_count = ramen_count + pho_count) %&gt;% 
+  mutate(percent_ramen = ramen_count/total_count) %&gt;% 
+  mutate(percent_pho = pho_count/total_count) 
+</code></pre>
+
+<pre><code>## Error in eval(lhs, parent, parent): object &#39;count_data&#39; not found
 </code></pre>
 
 <pre><code class="r">usa &lt;- map_data(&quot;usa&quot;)
@@ -214,19 +260,19 @@ north_america &lt;- ggplot() + geom_polygon(data=states, aes(x = long, y = lat, 
 
 canada_map &lt;- ggplot() + geom_polygon(data=canada, aes(x = long, y = lat, group = group), color = &quot;white&quot;, size=0.15, fill=&quot;#DCDCDC&quot;)
 us_map &lt;- ggplot() + geom_polygon(data=states, aes(x = long, y = lat, group = group), color = &quot;white&quot;, size=0.15, fill=&quot;#DCDCDC&quot;)
-</code></pre>
 
-<pre><code class="r">cities &lt;- data.frame(
+
+cities &lt;- data.frame(
   city = c(&quot;San Francisco&quot;, &quot;Toronto&quot;, &quot;Los Angeles&quot;, &quot;Vancouver&quot;, &quot;Seattle&quot;, &quot;San Diego&quot;, &quot;New York&quot;, &quot;Washington DC&quot;, &quot;Chicago&quot;, &quot;Las Vegas&quot;, &quot;Boston&quot;, &quot;Houston&quot;, &quot;Portland&quot;, &quot;Atlanta&quot;, &quot;Philadelphia&quot;, &quot;Phoenix&quot;, &quot;Miami&quot;, &quot;Denver&quot;, &quot;Dallas&quot;, &quot;Charlotte&quot;, &quot;Minneapolis&quot;, &quot;Montreal&quot;),
   lat = c(37.773972, 43.639217, 34.052235, 49.246292, 47.608013, 32.715736, 40.730610, 38.930176, 41.881832, 36.114647, 42.361145, 29.759438, 45.523064, 33.753746, 39.952583, 33.448376, 25.761681, 39.742043, 32.897480, 35.227085, 44.986656, 45.5017),
   long = c(-122.431297, -79.400414, -118.243683, -123.116226, -122.335167, -117.161087, -73.935242, -77.070503, -87.623177, -115.172813, -71.057083, -95.369957, -122.676483, -84.386330, -75.165222, -112.074036, -80.191788, -104.991531, -97.040443, -80.843124, -93.258133, -73.5673),
   stringsAsFactors = FALSE
 )
 
-count_data_by_city = inner_join(count_data, cities)
+count_data_by_city = inner_join(percent_count_data, cities)
 </code></pre>
 
-<pre><code>## Error in inner_join(count_data, cities): object &#39;count_data&#39; not found
+<pre><code>## Error in inner_join(percent_count_data, cities): object &#39;percent_count_data&#39; not found
 </code></pre>
 
 <pre><code class="r">us_count_data &lt;- count_data_by_city %&gt;% 
@@ -243,141 +289,71 @@ count_data_by_city = inner_join(count_data, cities)
 <pre><code>## Error in eval(lhs, parent, parent): object &#39;count_data_by_city&#39; not found
 </code></pre>
 
+<pre><code class="r">count_data_by_city
+</code></pre>
+
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;count_data_by_city&#39; not found
+</code></pre>
+
+<pre><code class="r">library(RColorBrewer)
+heatmap &lt;- colorRampPalette((brewer.pal(11, &quot;YlOrRd&quot;)), space=&quot;Lab&quot;)
+</code></pre>
+
+<pre><code>## Warning in brewer.pal(11, &quot;YlOrRd&quot;): n too large, allowed maximum for palette YlOrRd is 9
+## Returning the palette you asked for with that many colors
+</code></pre>
+
 <pre><code class="r">north_america + 
-  geom_point(data=count_data_by_city, aes(x = long, y = lat, size=ramen_count), color=&quot;dark red&quot;, alpha=0.4) + theme(legend.position=&quot;none&quot;) + ggtitle(&quot;Ramen Restaurants in Various North American Cities&quot;) 
+  geom_point(data=count_data_by_city, aes(x = long, y = lat, color=percent_ramen), size=4, alpha=0.6) +
+  ggtitle(&quot;Ramen Popularity in North America&quot;) +
+  scale_colour_gradientn(colours=heatmap(100), name=&quot;proportion of \nramen restaurants&quot;) +
+  theme(legend.justification=c(&quot;right&quot;, &quot;top&quot;),
+        legend.box.just=&quot;right&quot;,
+        legend.title=element_text(face=&quot;bold&quot;),
+        axis.text.x = element_text(angle = 90, hjust = 1, size=8),
+        plot.title = element_text(face=&quot;bold&quot;, size=14))
 </code></pre>
 
 <pre><code>## Error in fortify(data): object &#39;count_data_by_city&#39; not found
 </code></pre>
 
-<pre><code class="r">ggsave(&quot;../../results/north_america_map.png&quot;, width = 20, height = 20, units = &quot;cm&quot;)
+<pre><code class="r">ggsave(&quot;../../results/ramen_popularity.png&quot;, width = 20, height = 20, units = &quot;cm&quot;)
 </code></pre>
 
-<pre><code>## Error in grDevices::dev.off(): QuartzBitmap_Output - unable to open file &#39;../../results/north_america_map.png&#39;
+<pre><code>## Error in grDevices::dev.off(): QuartzBitmap_Output - unable to open file &#39;../../results/ramen_popularity.png&#39;
 </code></pre>
 
-<pre><code class="r">us_ramen &lt;- us_map + 
-  geom_point(data=us_count_data, aes(x = long, y = lat, size=ramen_count), color=&quot;dark red&quot;, alpha=0.4) + 
-  theme_bw() + 
-  theme(legend.position=&quot;none&quot;) + 
-  ggtitle(&quot;Ramen Restaurants in the US&quot;) 
+<pre><code class="r">heatmap &lt;- colorRampPalette((brewer.pal(11, &quot;YlGnBu&quot;)), space=&quot;Lab&quot;)
 </code></pre>
 
-<pre><code>## Error in fortify(data): object &#39;us_count_data&#39; not found
+<pre><code>## Warning in brewer.pal(11, &quot;YlGnBu&quot;): n too large, allowed maximum for palette YlGnBu is 9
+## Returning the palette you asked for with that many colors
 </code></pre>
 
-<pre><code class="r">us_pho &lt;- us_map + 
-  geom_point(data=us_count_data, aes(x = long, y = lat, size=pho_count), color=&quot;dark blue&quot;, alpha=0.4) + 
-  theme_bw() + 
-  theme(legend.position=&quot;none&quot;) + 
-  ggtitle(&quot;Pho Restaurants in the US&quot;) 
+<pre><code class="r">north_america + 
+  geom_point(data=count_data_by_city, aes(x = long, y = lat, color=percent_pho), size=4, alpha=0.7) +
+  ggtitle(&quot;Pho Popularity in North America&quot;) +
+  scale_colour_gradientn(colours=heatmap(100), name=&quot;proportion of \npho restaurants&quot;) +
+  theme(legend.justification=c(&quot;right&quot;, &quot;top&quot;),
+        legend.box.just=&quot;right&quot;,
+        legend.title=element_text(face=&quot;bold&quot;),
+        axis.text.x = element_text(angle = 90, hjust = 1, size=8),
+        plot.title = element_text(face=&quot;bold&quot;, size=14))
 </code></pre>
 
-<pre><code>## Error in fortify(data): object &#39;us_count_data&#39; not found
+<pre><code>## Error in fortify(data): object &#39;count_data_by_city&#39; not found
 </code></pre>
 
-<pre><code class="r">canada_ramen &lt;- canada_map + geom_point(data=canada_count_data, aes(x = long, y = lat, size=ramen_count), color=&quot;dark red&quot;, alpha=0.4) + 
-  theme_bw() + 
-  theme(legend.position=&quot;none&quot;) + 
-  ggtitle(&quot;Ramen Restaurants in Canada&quot;) 
+<pre><code class="r">ggsave(&quot;../../results/pho_popularity.png&quot;, width = 20, height = 20, units = &quot;cm&quot;)
 </code></pre>
 
-<pre><code>## Error in fortify(data): object &#39;canada_count_data&#39; not found
-</code></pre>
-
-<pre><code class="r">canada_pho &lt;- canada_map + geom_point(data=canada_count_data, aes(x = long, y = lat, size=pho_count), color=&quot;dark blue&quot;, alpha=0.4) + 
-  theme_bw() + 
-  theme(legend.position=&quot;none&quot;) + 
-  ggtitle(&quot;Pho Restaurants in Canada&quot;) 
-</code></pre>
-
-<pre><code>## Error in fortify(data): object &#39;canada_count_data&#39; not found
-</code></pre>
-
-<pre><code class="r">plot_grid(us_ramen, us_pho, canada_ramen, canada_pho)
-</code></pre>
-
-<pre><code>## Error in plot_grid(us_ramen, us_pho, canada_ramen, canada_pho): object &#39;us_ramen&#39; not found
-</code></pre>
-
-<pre><code class="r">ggsave(&quot;../../results/north_america_ramen_pho.png&quot;, width = 20, height = 20, units = &quot;cm&quot;)
-</code></pre>
-
-<pre><code>## Error in grDevices::dev.off(): QuartzBitmap_Output - unable to open file &#39;../../results/north_america_ramen_pho.png&#39;
+<pre><code>## Error in grDevices::dev.off(): QuartzBitmap_Output - unable to open file &#39;../../results/pho_popularity.png&#39;
 </code></pre>
 
 <pre><code class="r">t.test(x=count_data$ramen_count, y=count_data$pho_count, paired=TRUE)
 </code></pre>
 
 <pre><code>## Error in t.test(x = count_data$ramen_count, y = count_data$pho_count, : object &#39;count_data&#39; not found
-</code></pre>
-
-<pre><code class="r">library(reshape2)
-</code></pre>
-
-<pre><code>## 
-## Attaching package: &#39;reshape2&#39;
-</code></pre>
-
-<pre><code>## The following object is masked from &#39;package:tidyr&#39;:
-## 
-##     smiths
-</code></pre>
-
-<pre><code class="r">percent_count_data &lt;- count_data %&gt;% 
-  mutate(total_count = ramen_count + pho_count) %&gt;% 
-  mutate(percent_ramen = ramen_count/total_count) %&gt;% 
-  mutate(percent_pho = pho_count/total_count) 
-</code></pre>
-
-<pre><code>## Error in eval(lhs, parent, parent): object &#39;count_data&#39; not found
-</code></pre>
-
-<pre><code class="r">melted_count_data &lt;- melt(count_data, id=c(&quot;city&quot;, &quot;state&quot;, &quot;country&quot;), value.name=&quot;count&quot;)
-</code></pre>
-
-<pre><code>## Error in melt(count_data, id = c(&quot;city&quot;, &quot;state&quot;, &quot;country&quot;), value.name = &quot;count&quot;): object &#39;count_data&#39; not found
-</code></pre>
-
-<pre><code class="r">ggplot(melted_count_data) + 
-  geom_bar(aes(x=city, y=count, fill=variable), position=&quot;dodge&quot;, stat=&quot;identity&quot;) +
-  scale_fill_discrete(name=&quot;noodle type&quot;) +
-  theme(legend.justification=c(&quot;right&quot;, &quot;top&quot;),
-        legend.box.just=&quot;right&quot;,
-        legend.position=c(0.95,0.95),
-        legend.title=element_text(face=&quot;bold&quot;),
-        axis.text.x = element_text(angle = 90, hjust = 1, size=8))
-</code></pre>
-
-<pre><code>## Error in ggplot(melted_count_data): object &#39;melted_count_data&#39; not found
-</code></pre>
-
-<pre><code class="r">pho_reviews = read_csv(&quot;../../data/pho_reviews.csv&quot;)
-</code></pre>
-
-<pre><code>## Error: &#39;../../data/pho_reviews.csv&#39; does not exist in current working directory (&#39;/Users/jillcates/Dev/mds/block3/DSCI-522/labs/ramen-vs-pho&#39;).
-</code></pre>
-
-<pre><code class="r">pho_reviews &lt;- pho_reviews %&gt;% 
-  filter(city != &#39;city&#39;) %&gt;% 
-  select(city, review_count, food_type)
-</code></pre>
-
-<pre><code>## Error in eval(lhs, parent, parent): object &#39;pho_reviews&#39; not found
-</code></pre>
-
-<pre><code class="r">ramen_reviews = read_csv(&quot;../../data/ramen_reviews.csv&quot;)
-</code></pre>
-
-<pre><code>## Error: &#39;../../data/ramen_reviews.csv&#39; does not exist in current working directory (&#39;/Users/jillcates/Dev/mds/block3/DSCI-522/labs/ramen-vs-pho&#39;).
-</code></pre>
-
-<pre><code class="r">ramen_reviews &lt;- ramen_reviews %&gt;% 
-  filter(city != &#39;city&#39;) %&gt;% 
-  select(city, review_count, food_type)
-</code></pre>
-
-<pre><code>## Error in eval(lhs, parent, parent): object &#39;ramen_reviews&#39; not found
 </code></pre>
 
 </body>

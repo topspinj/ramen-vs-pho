@@ -6,6 +6,10 @@ doc/report.md: src/r_analysis/report.Rmd
 
 # clean up intermediate files
 clean_counts:
-	rm -rf data/restaurant_counts/*.csv
+	rm -f data/restaurant_counts/*.csv
 clean_reviews:
-	rm -rf data/reviews/*.csv
+	rm -f data/reviews/*.csv
+
+# delete imgs in results folder
+clean_imgs:
+	rm -f results/*.png
