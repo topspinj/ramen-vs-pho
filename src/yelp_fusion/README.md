@@ -13,10 +13,28 @@ for more details.
 
 ## Steps to run
 
-To install the dependencies, run:
+### To install the dependencies, run:
 `pip install -r requirements.txt`.
 
-Run script:
-`python get_reviews.py`
+### Run script:
+
+* Important: you will need to create a config file to store your Yelp API client ID and secret in order for the API to work
+
+
+To get top 5 ramen and pho restaurant data for each city, run this script:
+
+```
+python get_reviews.py
+```
 
 The output csv files are located in **../../data/reviews/**.
+
+To get with ramen and pho restaurant count data for each city, run this script:
+
+```
+python get_restaurant_count.py
+```
+
+The output csv files are located in **../../data/restaurant_counts/**.
+
+In both python scripts, `city_args` is an array which contains all of the cities to be queried. This array gets looped over and fetches data for each city. If you would like to remove or add cities in these queries, you simply need to modify the `city_args` array.
