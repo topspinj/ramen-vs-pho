@@ -1,5 +1,5 @@
 ---
-title: "Exploratory Data Analysis"
+title: "Ramen vs. Pho Data Analysis"
 author: "Jill Cates"
 date: '2017-11-27'
 output: html_document
@@ -10,6 +10,8 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(maps)
 library(cowplot)
+library(reshape2)
+library(forcats)
 ```
 
 ```{r}
@@ -83,24 +85,32 @@ t.test(x=count_data$ramen_count, y=count_data$pho_count, paired=TRUE)
 
 
 ```{r}
-library(reshape2)
-
 percent_count_data <- count_data %>% 
   mutate(total_count = ramen_count + pho_count) %>% 
   mutate(percent_ramen = ramen_count/total_count) %>% 
   mutate(percent_pho = pho_count/total_count) 
 
-melted_count_data <- melt(count_data, id=c("city", "state", "country"), value.name="count")
-  
+melted_count_data <- melt(count_data, id=c("city", "state", "country"), value.name="count") 
+
+
+melted_count_data$variable <- melted_count_data$variable %>% 
+  fct_recode("ramen" = "ramen_count", "pho" = "pho_count") 
+
+
 ggplot(melted_count_data) + 
-  geom_bar(aes(x=city, y=count, fill=variable), position="dodge", stat="identity") +
-  scale_fill_discrete(name="noodle type") +
+  geom_bar(aes(x=fct_reorder(city, count, .desc=TRUE), y=count, fill=variable), position="dodge", stat="identity") +
+  scale_fill_discrete(name="restaurant type") +
+  xlab("city") +
+  ggtitle("Ramen and Pho Restaurants by City") +
+  theme_classic() +
   theme(legend.justification=c("right", "top"),
         legend.box.just="right",
         legend.position=c(0.95,0.95),
         legend.title=element_text(face="bold"),
-        axis.text.x = element_text(angle = 90, hjust = 1, size=8))
+        axis.text.x = element_text(angle = 90, hjust = 1, size=8),
+        plot.title = element_text(face="bold", size=14))
 
+ggsave("../../results/ramen_pho_restaurants_by_city.png", width = 30, height = 20, units = "cm")
 ```
 
 
