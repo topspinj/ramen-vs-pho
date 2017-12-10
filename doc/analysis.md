@@ -1,42 +1,19 @@
----
-title: "Ramen vs. Pho Data Analysis"
-author: "Jill Cates"
-date: '2017-11-27'
-output: html_document
----
+Ramen vs. Pho Data Analysis
+================
+Jill Cates
+2017-11-27
 
+### Figure 1: a bar plot comparing ramen vs pho restaurant counts across cities.
 
-
-
-### Figure 1: a bar plot comparing ramen vs pho restaurant counts across cities. 
-
-
-```r
+``` r
 count_data = read_csv("../../data/ramen_pho_count.csv")
-```
 
-```
-## Error: '../../data/ramen_pho_count.csv' does not exist in current working directory ('/Users/jillcates/Dev/mds/block3/DSCI-522/labs/ramen-vs-pho').
-```
-
-```r
 melted_count_data <- melt(count_data, id=c("city", "state", "country"), value.name="count") 
-```
 
-```
-## Error in melt(count_data, id = c("city", "state", "country"), value.name = "count"): object 'count_data' not found
-```
-
-```r
 melted_count_data$variable <- melted_count_data$variable %>% 
   fct_recode("ramen" = "ramen_count", "pho" = "pho_count") 
-```
 
-```
-## Error in eval(lhs, parent, parent): object 'melted_count_data' not found
-```
 
-```r
 ggplot(melted_count_data) + 
   geom_bar(aes(x=fct_reorder(city, count, .desc=TRUE), y=count, fill=variable), position="dodge", stat="identity") +
   scale_fill_discrete(name="restaurant type") +
@@ -51,32 +28,20 @@ ggplot(melted_count_data) +
         plot.title = element_text(face="bold", size=14))
 ```
 
-```
-## Error in ggplot(melted_count_data): object 'melted_count_data' not found
-```
+![](analysis_files/figure-markdown_github/unnamed-chunk-1-1.png)
 
-```r
+``` r
 ggsave("../../results/ramen_pho_restaurants_by_city.png", width = 30, height = 20, units = "cm")
 ```
 
-
-
-
 ### Figure 2: a map of ramen and pho restaurant frequency in North America
 
-
-```r
+``` r
 percent_count_data <- count_data %>% 
   mutate(total_count = ramen_count + pho_count) %>% 
   mutate(percent_ramen = ramen_count/total_count) %>% 
   mutate(percent_pho = pho_count/total_count) 
-```
 
-```
-## Error in eval(lhs, parent, parent): object 'count_data' not found
-```
-
-```r
 usa <- map_data("usa")
 canada <- map_data("world", "canada")
 states <- map_data("state")
@@ -96,50 +61,43 @@ cities <- data.frame(
 count_data_by_city = inner_join(percent_count_data, cities)
 ```
 
-```
-## Error in inner_join(percent_count_data, cities): object 'percent_count_data' not found
-```
+    ## Joining, by = "city"
 
-```r
+``` r
 us_count_data <- count_data_by_city %>% 
   filter(country == "USA")
-```
 
-```
-## Error in eval(lhs, parent, parent): object 'count_data_by_city' not found
-```
-
-```r
 canada_count_data <- count_data_by_city %>% 
   filter(country == "Canada")
-```
 
-```
-## Error in eval(lhs, parent, parent): object 'count_data_by_city' not found
-```
-
-```r
 count_data_by_city
 ```
 
-```
-## Error in eval(expr, envir, enclos): object 'count_data_by_city' not found
-```
+    ## # A tibble: 21 x 10
+    ##             city            state country ramen_count pho_count
+    ##            <chr>            <chr>   <chr>       <int>     <int>
+    ##  1 San Francisco       California     USA         869       596
+    ##  2       Toronto          Ontario  Canada         314       282
+    ##  3     Vancouver British Columbia  Canada         303       274
+    ##  4   Los Angeles       California     USA        1802      1503
+    ##  5       Chicago         Illinois     USA         431       232
+    ##  6      New York         New York     USA        1501       455
+    ##  7       Houston            Texas     USA         227       455
+    ##  8      Montreal           Quebec  Canada         103       163
+    ##  9  Philadelphia     Pennsylvania     USA         174       209
+    ## 10        Dallas            Texas     USA         222       291
+    ## # ... with 11 more rows, and 5 more variables: total_count <int>,
+    ## #   percent_ramen <dbl>, percent_pho <dbl>, lat <dbl>, long <dbl>
 
-
-
-
-```r
+``` r
 library(RColorBrewer)
 heatmap <- colorRampPalette((brewer.pal(11, "YlOrRd")), space="Lab")
 ```
 
-```
-## Warning in brewer.pal(11, "YlOrRd"): n too large, allowed maximum for palette YlOrRd is 9
-## Returning the palette you asked for with that many colors
-```
+    ## Warning in brewer.pal(11, "YlOrRd"): n too large, allowed maximum for palette YlOrRd is 9
+    ## Returning the palette you asked for with that many colors
 
-```r
+``` r
 north_america + 
   geom_point(data=count_data_by_city, aes(x = long, y = lat, color=percent_ramen), size=4, alpha=0.6) +
   ggtitle("Ramen Popularity in North America") +
@@ -151,31 +109,20 @@ north_america +
         plot.title = element_text(face="bold", size=14))
 ```
 
-```
-## Error in fortify(data): object 'count_data_by_city' not found
-```
+![](analysis_files/figure-markdown_github/unnamed-chunk-3-1.png)
 
-```r
+``` r
 ggsave("../../results/ramen_popularity.png", width = 20, height = 20, units = "cm")
 ```
 
-```
-## Error in grDevices::dev.off(): QuartzBitmap_Output - unable to open file '../../results/ramen_popularity.png'
-```
-
-
-
-
-```r
+``` r
 heatmap <- colorRampPalette((brewer.pal(11, "YlGnBu")), space="Lab")
 ```
 
-```
-## Warning in brewer.pal(11, "YlGnBu"): n too large, allowed maximum for palette YlGnBu is 9
-## Returning the palette you asked for with that many colors
-```
+    ## Warning in brewer.pal(11, "YlGnBu"): n too large, allowed maximum for palette YlGnBu is 9
+    ## Returning the palette you asked for with that many colors
 
-```r
+``` r
 north_america + 
   geom_point(data=count_data_by_city, aes(x = long, y = lat, color=percent_pho), size=4, alpha=0.7) +
   ggtitle("Pho Popularity in North America") +
@@ -187,23 +134,24 @@ north_america +
         plot.title = element_text(face="bold", size=14))
 ```
 
-```
-## Error in fortify(data): object 'count_data_by_city' not found
-```
+![](analysis_files/figure-markdown_github/unnamed-chunk-4-1.png)
 
-```r
+``` r
 ggsave("../../results/pho_popularity.png", width = 20, height = 20, units = "cm")
 ```
 
-```
-## Error in grDevices::dev.off(): QuartzBitmap_Output - unable to open file '../../results/pho_popularity.png'
-```
-
-
-```r
+``` r
 t.test(x=count_data$ramen_count, y=count_data$pho_count, paired=TRUE)
 ```
 
-```
-## Error in t.test(x = count_data$ramen_count, y = count_data$pho_count, : object 'count_data' not found
-```
+    ## 
+    ##  Paired t-test
+    ## 
+    ## data:  count_data$ramen_count and count_data$pho_count
+    ## t = 1.03, df = 26, p-value = 0.3125
+    ## alternative hypothesis: true difference in means is not equal to 0
+    ## 95 percent confidence interval:
+    ##  -45.32129 136.35833
+    ## sample estimates:
+    ## mean of the differences 
+    ##                45.51852

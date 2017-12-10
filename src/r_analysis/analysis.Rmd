@@ -2,7 +2,7 @@
 title: "Ramen vs. Pho Data Analysis"
 author: "Jill Cates"
 date: '2017-11-27'
-output: html_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE, warning=FALSE, message=FALSE}
