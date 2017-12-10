@@ -142,6 +142,12 @@ Source: CRAN
 Version: 1.2.0
 Hash: 381e42baedecc633c0e547a0c7ca9de7
 
+Package: gridExtra
+Source: CRAN
+Version: 2.3
+Hash: fa977bc1aab5588a08123b10ceb1ad3d
+Requires: gtable
+
 Package: gtable
 Source: CRAN
 Version: 0.2.0
@@ -394,6 +400,12 @@ Hash: 72d5fada870c90b835bbdfc281283c99
 Requires: broom, dplyr, forcats, ggplot2, haven, hms, httr, jsonlite,
     lubridate, magrittr, modelr, purrr, readr, readxl, rvest, stringr,
     tibble, tidyr, xml2
+
+Package: viridis
+Source: CRAN
+Version: 0.4.0
+Hash: 5bdac1bcf74a10a7a96f82191f498ab7
+Requires: ggplot2, gridExtra, viridisLite
 
 Package: viridisLite
 Source: CRAN
