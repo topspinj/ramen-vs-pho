@@ -1,6 +1,0 @@
-,city,food_type,latitude,longitude,name,rank,rating,review_count
-0,"Minneapolis, Minnesota",ramen,44.9410781860352,-93.2781982421875,ramen-kazama-minneapolis,0,4.0,242
-1,"Minneapolis, Minnesota",ramen,44.9534706557005,-93.278125129286,ichiddo-ramen-minneapolis,1,4.0,128
-2,"Minneapolis, Minnesota",ramen,44.9784334,-93.2596172,zen-box-izakaya-minneapolis,2,4.0,377
-3,"Minneapolis, Minnesota",ramen,44.9463219445807,-93.1366431930528,tori-ramen-saint-paul,3,4.0,151
-4,"Minneapolis, Minnesota",ramen,44.9578176166667,-93.2423242562752,unideli-minneapolis,4,3.5,172
