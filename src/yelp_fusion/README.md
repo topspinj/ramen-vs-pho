@@ -21,7 +21,12 @@ pip install -r requirements.txt
 
 ### Run script:
 
-* Important: you will need to create a config file to store your Yelp API client ID and secret in order for the API to work. You can get these [here](https://www.yelp.com/developers/documentation/v3/authentication).
+* Important: you will need to create a config file to store your Yelp API client ID and secret in order for the API to work. You can get these [here](https://www.yelp.com/developers/documentation/v3/authentication). In your config.py, add keys in the following format:
+
+```
+client_id = 'XXXXXX'
+client_secret = 'XXXXXX'
+```
 
 
 To get top 5 ramen and pho restaurant data for each city, run this script:
