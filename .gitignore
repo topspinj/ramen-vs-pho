@@ -7,6 +7,6 @@ src/yelp_fusion/.vscode
 src/yelp_fusion/__pycache__
 src/r_analysis/packrat/lib*/
 src/r_analysis/packrat/src/
-data/reviews/
-data/restaurant_counts/
+data/reviews/*.csv
+data/restaurant_counts/*.csv
 data/google_trends_by_city/
