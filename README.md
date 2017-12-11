@@ -6,6 +6,11 @@ This project investigates the popularity of pho and ramen in major cities across
 
 Which is more popular: pho or ramen? 
 
+### Hypothesis 
+
+Ramen is more popular than pho in North America. 
+
+
 ### Data Source
 
 The dataset is obtained from Yelp Fusion API for 18 metropolitan cities in North America. 
@@ -17,13 +22,9 @@ These python scripts fetch data for each city individually, which generates a se
 Yelp explains their search results algorithm [here](https://www.yelp-support.com/article/How-does-Yelp-decide-which-reviews-to-feature-in-search-results?l=en_US).
 
 
-### Make Tasks
+### Makefile
 
-Run tasks in [Makefile](Makefile) to clean up intermediate data and knit analysis/report Rmarkdown files. 
-
-### Hypothesis 
-
-Ramen is more popular than pho in North America. 
+The [Makefile](Makefile) contains tasks that clean up intermediate data and knit analysis/report Rmarkdown files. 
 
 ### Data Analysis Plan 
 
