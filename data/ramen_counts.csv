@@ -1,5 +1,13 @@
 ,city,food_type,restaurant_count
-0,"Chicago, Illinois",ramen,431
+0,"Atlanta, Georgia",ramen,234
+,city,food_type,restaurant_count
+0,"Boston, Massachussetts",ramen,250
+,city,food_type,restaurant_count
+0,"Chicago, Illinois",ramen,432
+,city,food_type,restaurant_count
+0,"Houston, Texas",ramen,230
+,city,food_type,restaurant_count
+0,"Las Vegas, Nevada",ramen,287
 ,city,food_type,restaurant_count
 0,"Los Angeles, CA",ramen,1800
 ,city,food_type,restaurant_count
@@ -11,7 +19,11 @@
 ,city,food_type,restaurant_count
 0,"New York, New York",ramen,1500
 ,city,food_type,restaurant_count
-0,"San Diego, CA",ramen,410
+0,"Philadelphia, Pennsylvania",ramen,178
+,city,food_type,restaurant_count
+0,"Portland, Oregon",ramen,229
+,city,food_type,restaurant_count
+0,"San Diego, CA",ramen,411
 ,city,food_type,restaurant_count
 0,"San Francisco, CA",ramen,880
 ,city,food_type,restaurant_count

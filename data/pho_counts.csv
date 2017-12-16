@@ -1,15 +1,27 @@
 ,city,food_type,restaurant_count
+0,"Atlanta, Georgia",pho,218
+,city,food_type,restaurant_count
+0,"Boston, Massachussetts",pho,196
+,city,food_type,restaurant_count
 0,"Chicago, Illinois",pho,233
+,city,food_type,restaurant_count
+0,"Houston, Texas",pho,457
+,city,food_type,restaurant_count
+0,"Las Vegas, Nevada",pho,241
 ,city,food_type,restaurant_count
 0,"Los Angeles, CA",pho,1500
 ,city,food_type,restaurant_count
 0,"Miami, Florida",pho,67
 ,city,food_type,restaurant_count
-0,"Minneapolis, Minnesota",pho,218
+0,"Minneapolis, Minnesota",pho,219
 ,city,food_type,restaurant_count
 0,"Montreal, Quebec",pho,163
 ,city,food_type,restaurant_count
 0,"New York, New York",pho,456
+,city,food_type,restaurant_count
+0,"Philadelphia, Pennsylvania",pho,212
+,city,food_type,restaurant_count
+0,"Portland, Oregon",pho,259
 ,city,food_type,restaurant_count
 0,"San Diego, CA",pho,380
 ,city,food_type,restaurant_count
@@ -17,7 +29,7 @@
 ,city,food_type,restaurant_count
 0,"Seattle, Washington",pho,536
 ,city,food_type,restaurant_count
-0,"Toronto, Ontario",pho,282
+0,"Toronto, Ontario",pho,283
 ,city,food_type,restaurant_count
 0,"Vancouver, British Columbia",pho,272
 ,city,food_type,restaurant_count
