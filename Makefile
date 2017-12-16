@@ -9,7 +9,11 @@ concatenate_csv:
 
 clean_data: 
 	Rscript src/csv_cleaner.R data/pho_counts.csv data/ramen_counts.csv results/pho_ramen_counts_clean.csv
-	
+
+barplot:
+	Rscript src/barplot_generator.R results/pho_ramen_counts_clean.csv results/ramen_pho_restaurants_by_city.png
+
+
 # clean up intermediate files
 clean_counts:
 	rm -f data/restaurant_counts/*.csv
