@@ -13,23 +13,19 @@ pho_input <- args[2]
 output_file <- args[3]
 
 
-library(tidyverse)
-library(readr)
-
+suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(readr))
 
 main <- function(){
-  pho = read_csv(ramen_input)
-  ramen = read_csv(pho_input)
+  pho = read_csv(ramen_input, col_types = cols())
+  ramen = read_csv(pho_input, col_types = cols())
   
   ramen_pho <- full_join(pho, ramen, by="city")
-  ramen_pho %>% 
+  pho_ramen_count_clean <- ramen_pho %>% 
     select(city, pho_count = restaurant_count.x, ramen_count = restaurant_count.y) %>% 
     filter(city != 'city')
   
-  
-  #write clean csv to output folder
   write_csv(pho_ramen_count_clean, path = output_file)
-  
 }
 
 main()
