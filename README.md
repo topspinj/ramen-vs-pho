@@ -57,7 +57,7 @@ You can pull the docker container for this repo here:
 docker pull jillcates/ramen-vs-pho
 ```
 
-Start fresh by cleaning up the intermediate file. You can clean up the raw files too (`make clean_raw`), though this will require you to pull from the Yelp API using your own client tokens. Instructions on how to do this can be found in [**src/yelp_fusion/README.md**](src/yelp_fusion/README.md).
+Start fresh by cleaning up the repo and deleting the intermediate files. You can clean up the raw files too (`make clean_raw`), though this will require you to pull from the Yelp API using your own client tokens. Instructions on how to do this can be found in [**src/yelp_fusion/README.md**](src/yelp_fusion/README.md).
 
 ```
 # get path using pwd()
