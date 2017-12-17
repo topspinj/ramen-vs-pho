@@ -9,7 +9,7 @@ output: github_document
 
 The ramen-vs-pho controversy is an age-old debate that has divided family and friends. 
 
-![](data/battle-of-pho-vs-ramen.png)
+![](../data/battle-of-pho-vs-ramen.png)
 
 In this analysis, I delve deeper into this controversial topic to objectively measure which noodle is really the most popular in North America. 
 
