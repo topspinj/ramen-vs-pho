@@ -16,7 +16,6 @@ ramen_png <- args[4]
 suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(readr))
 suppressPackageStartupMessages(library(maps))
-suppressPackageStartupMessages(library(cowplot))
 suppressPackageStartupMessages(library(reshape2))
 suppressPackageStartupMessages(library(forcats))
 suppressPackageStartupMessages(library(RColorBrewer))
