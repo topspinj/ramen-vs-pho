@@ -20,7 +20,7 @@ suppressPackageStartupMessages(library(RColorBrewer))
 
 wrangle_data <- function() {
   count_data <- read_csv(input_file, col_types = cols())
-  melted_count_data <- melt(count_data, id=c("city"), value.name="count") 
+  melted_count_data <- melt(count_data, id=c("city", "state"), value.name="count") 
   melted_count_data$restaurant <- melted_count_data$variable %>% 
     fct_recode("ramen" = "ramen_count", "pho" = "pho_count") 
   return(melted_count_data)

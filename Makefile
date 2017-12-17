@@ -15,11 +15,15 @@ doc/report.md: src/report.Rmd
 
 
 # clean up intermediate files
-clean_counts:
-	rm -f data/restaurant_counts/*.csv
-clean_reviews:
-	rm -f data/reviews/*.csv
+clean_intermediate:
+	rm -f data/pho_counts.csv
+	rm -f data/ramen_counts.csv
+	rm -f data/pho_reviews.csv
+	rm -f data/ramen_reviews.csv
+	rm -f data/ramen_pho_count.csv
 
-# delete imgs in results folder
-clean_imgs:
-	rm -f results/*.png
+# clean up raw files, data obtained from Yelp API 
+clean_raw: 
+	rm -f data/restaurant_counts/*.csv
+	rm -f data/reviews/*.csv
+	
