@@ -22,6 +22,3 @@ RUN apt-get update \
 
 # get python package dependencies
 RUN apt-get install -y python3-tk
-
-COPY requirements.txt ./
-RUN pip3 install --no-cache-dir -r requirements.txt
