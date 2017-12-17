@@ -1,9 +1,3 @@
-doc/analysis.md: src/r_analysis/analysis.Rmd 
-	Rscript -e 'ezknitr::ezknit("src/r_analysis/analysis.Rmd", out_dir="doc")'
-
-doc/report.md: src/r_analysis/report.Rmd
-	Rscript -e 'ezknitr::ezknit("src/r_analysis/report.Rmd", out_dir="doc")'
-
 concatenate_csv:
 	bash src/concatenate_csv.sh data/restaurant_counts data
 
@@ -12,6 +6,14 @@ clean_data:
 
 barplot:
 	Rscript src/barplot_generator.R results/pho_ramen_counts_clean.csv results/ramen_pho_restaurants_by_city.png
+
+doc/analysis.md: src/r_analysis/analysis.Rmd 
+	Rscript -e 'ezknitr::ezknit("src/r_analysis/analysis.Rmd", out_dir="doc")'
+
+doc/report.md: src/r_analysis/report.Rmd
+	Rscript -e 'ezknitr::ezknit("src/r_analysis/report.Rmd", out_dir="doc")'
+
+
 
 
 # clean up intermediate files

@@ -12,11 +12,10 @@ ramen_input <- args[1]
 pho_input <- args[2]
 output_file <- args[3]
 
-
 suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(readr))
-  ramen_input <- "../../data/ramen_counts.csv"
-  pho_input <- "../../data/pho_counts.csv"
+suppressPackageStartupMessages(library(forcats))
+
 main <- function(){
   pho = read_csv(ramen_input, col_types = cols())
   ramen = read_csv(pho_input, col_types = cols())
