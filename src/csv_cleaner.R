@@ -15,7 +15,8 @@ output_file <- args[3]
 
 suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(readr))
-
+  ramen_input <- "../../data/ramen_counts.csv"
+  pho_input <- "../../data/pho_counts.csv"
 main <- function(){
   pho = read_csv(ramen_input, col_types = cols())
   ramen = read_csv(pho_input, col_types = cols())
@@ -23,8 +24,12 @@ main <- function(){
   ramen_pho <- full_join(pho, ramen, by="city")
   pho_ramen_count_clean <- ramen_pho %>% 
     select(city, pho_count = restaurant_count.x, ramen_count = restaurant_count.y) %>% 
-    filter(city != 'city')
+    filter(city != 'city') %>% 
+    separate(col=city, into=c("city", "state"), sep=", ")
   
+  pho_ramen_count_clean$state<-as.factor(pho_ramen_count_clean$state) %>%
+    fct_recode("California" = "CA")
+
   write_csv(pho_ramen_count_clean, path = output_file)
 }
 
