@@ -28,7 +28,7 @@ wrangle_data <- function() {
 
 create_plot <- function() {
   data <- wrangle_data()
-  plot <- ggplot(data) + 
+  ggplot(data) + 
     geom_bar(aes(x=fct_reorder(city, count, .desc=TRUE), y=count, fill=restaurant), position="dodge", stat="identity") +
     scale_fill_discrete(name="restaurant type") +
     xlab("city") +

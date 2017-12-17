@@ -1,19 +1,19 @@
-city,pho_count,ramen_count
-"Atlanta, Georgia",218,234
-"Boston, Massachussetts",196,250
-"Chicago, Illinois",233,432
-"Houston, Texas",457,230
-"Las Vegas, Nevada",241,287
-"Los Angeles, CA",1500,1800
-"Miami, Florida",67,144
-"Minneapolis, Minnesota",219,95
-"Montreal, Quebec",163,97
-"New York, New York",456,1500
-"Philadelphia, Pennsylvania",212,178
-"Portland, Oregon",259,229
-"San Diego, CA",380,411
-"San Francisco, CA",598,880
-"Seattle, Washington",536,383
-"Toronto, Ontario",283,314
-"Vancouver, British Columbia",272,306
-"Washington, DC",337,288
+city,state,pho_count,ramen_count
+Atlanta,Georgia,218,234
+Boston,Massachussetts,196,250
+Chicago,Illinois,233,432
+Houston,Texas,457,230
+Las Vegas,Nevada,241,287
+Los Angeles,California,1500,1800
+Miami,Florida,67,144
+Minneapolis,Minnesota,219,95
+Montreal,Quebec,163,97
+New York,New York,456,1500
+Philadelphia,Pennsylvania,212,178
+Portland,Oregon,259,229
+San Diego,California,380,411
+San Francisco,California,598,880
+Seattle,Washington,536,383
+Toronto,Ontario,283,314
+Vancouver,British Columbia,272,306
+Washington,DC,337,288

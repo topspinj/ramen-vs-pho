@@ -7,6 +7,9 @@ clean_data:
 barplot:
 	Rscript src/barplot_generator.R results/pho_ramen_counts_clean.csv results/ramen_pho_restaurants_by_city.png
 
+maps:
+	Rscript src/map_generator.R results/pho_ramen_counts_clean.csv data/cities_coords.csv results/pho_restaurants.png results/ramen_restaurants.png
+	
 doc/analysis.md: src/r_analysis/analysis.Rmd 
 	Rscript -e 'ezknitr::ezknit("src/r_analysis/analysis.Rmd", out_dir="doc")'
 
