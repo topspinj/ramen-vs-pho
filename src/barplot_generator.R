@@ -2,7 +2,7 @@
 # map_generator.R
 # Jill Cates, Dec 2017
 #
-# This script reads in the cleaned csv file with pho and ramen restaurant count data and creates plots that represent restaurant count frequency on a map.
+# This script reads in the cleaned csv file with pho and ramen restaurant count data, joins with city latitude/longitude data, and creates plots that represent pho/ramen popularity on a map.
 #
 # Usage: Rscript src/barplot_generator.R results/pho_ramen_counts_clean.csv ramen_pho_restaurants_by_city.png
 
@@ -40,8 +40,7 @@ create_plot <- function() {
           legend.title=element_text(face="bold"),
           axis.text.x = element_text(angle = 90, hjust = 1, size=8),
           plot.title = element_text(face="bold", size=14))
-  ggsave(output_file, width = 30, height = 20, units = "cm")
-  
+  ggsave(output_file, width = 30, height = 20, units = "cm") 
 }
 
 create_plot()
