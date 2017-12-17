@@ -40,9 +40,6 @@ In this analysis, we compare the number of pho and ramen restaurants in 18 North
 
 You can see a report of the analysis [here](doc/report.md).
 
-![](data/battle-of-pho-vs-ramen.png)
-
-
 ### Running the analysis in Docker
 
 Clone repo:
