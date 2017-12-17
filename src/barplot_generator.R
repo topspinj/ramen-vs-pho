@@ -32,7 +32,6 @@ create_plot <- function() {
     geom_bar(aes(x=fct_reorder(city, count, .desc=TRUE), y=count, fill=restaurant), position="dodge", stat="identity") +
     scale_fill_discrete(name="restaurant type") +
     xlab("city") +
-    ggtitle("Ramen and Pho Restaurants by City") +
     theme_classic() +
     theme(legend.justification=c("right", "top"),
           legend.box.just="right",

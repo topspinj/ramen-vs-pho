@@ -52,7 +52,6 @@ create_ramen_popularity_map <- function() {
   
   basemap + 
     geom_point(data=count_data_by_city, aes(x = long, y = lat, color=percent_ramen), size=4, alpha=0.6) +
-    ggtitle("Ramen Popularity in North America") +
     scale_colour_gradientn(colours=heatmap(100), name="proportion of \nramen restaurants") +
     theme(legend.justification=c("right", "top"),
           legend.box.just="right",
@@ -72,7 +71,6 @@ create_pho_popularity_map <- function() {
   
   basemap + 
     geom_point(data=count_data_by_city, aes(x = long, y = lat, color=percent_pho), size=4, alpha=0.7) +
-    ggtitle("Pho Popularity in North America") +
     scale_colour_gradientn(colours=heatmap(100), name="proportion of \npho restaurants") +
     theme(legend.justification=c("right", "top"),
           legend.box.just="right",
