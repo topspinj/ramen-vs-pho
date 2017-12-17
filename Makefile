@@ -3,7 +3,7 @@ all: doc/report.md
 concatenate_csv:
 	bash src/concatenate_csv.sh data/restaurant_counts data
 
-clean_data: 
+wrangle_data: 
 	Rscript src/csv_cleaner.R data/pho_counts.csv data/ramen_counts.csv results/pho_ramen_counts_clean.csv
 
 barplot:
@@ -22,9 +22,9 @@ clean_intermediate:
 	rm -f data/pho_reviews.csv
 	rm -f data/ramen_reviews.csv
 	rm -f data/ramen_pho_count.csv
+	rm -f results/*
 
 # clean up raw files, data obtained from Yelp API 
 clean_raw: 
 	rm -f data/restaurant_counts/*.csv
 	rm -f data/reviews/*.csv
-	

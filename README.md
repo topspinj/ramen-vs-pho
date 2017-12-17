@@ -24,12 +24,16 @@ Yelp explains their search results algorithm [here](https://www.yelp-support.com
 
 ### Makefile
 
-The [Makefile](Makefile) contains tasks that clean up intermediate data and knit analysis/report Rmarkdown files. 
+The [Makefile](Makefile) contains tasks that clean up intermediate data, run Rscripts, and the knit report Rmarkdown file. 
+
+Running task `make all` will generate a knitted report markdown file. The dependency file structure is defined in this plot:
+
+![](Makefile.png)
+
 
 ### Data Analysis Plan 
 
-- compare number of pho vs. ramen restaurants in 18 North American cities 
-- map proporition of pho vs. ramen restaurants for each city using ggplot
+In this analysis, we compare the number of pho and ramen restaurants in 18 North American cities using a grouped barplot. We also map the frequency of pho and ramen restaurants for each city, to see if there are any patterns in noodle popularity. 
 
 
 ### Results
@@ -37,3 +41,60 @@ The [Makefile](Makefile) contains tasks that clean up intermediate data and knit
 You can see a report of the analysis [here](doc/report.md).
 
 ![](data/battle-of-pho-vs-ramen.png)
+
+
+### Running the analysis in Docker
+
+Clone repo:
+
+```
+git clone git@github.com:topspinj/ramen-vs-pho.git
+```
+
+You can pull the docker container for this repo here:
+
+```
+docker pull jillcates/ramen-vs-pho
+```
+
+Start fresh by cleaning up the intermediate file. You can clean up the raw files too (`make clean_raw`), though this will require you to pull from the Yelp API using your own client tokens. Instructions on how to do this can be found in [**src/yelp_fusion/README.md**](src/yelp_fusion/README.md).
+
+```
+# get path using pwd()
+
+docker run --rm -v PATH:/home/ramen-vs-pho jillcates/ramen-vs-pho make -C '/home/ramen-vs-pho' clean_intermeidate
+```
+
+Then, you'll need to merge the raw csv files to create a brand new concatenate file that contains data from all of the Yelp API fetches.
+
+```
+# get path using pwd()
+
+docker run --rm -it -v PATH:/home/ramen-vs-pho jillcates/ramen-vs-pho make -C 'home/ramen-vs-pho' concatenate_csv
+```
+
+The next step is to wrangle the data.
+
+```
+# get path using pwd()
+
+docker run --rm -it -v PATH:/home/ramen-vs-pho jillcates/ramen-vs-pho make -C 'home/ramen-vs-pho' wrangle_data
+```
+
+It's now time to create the barplots and heatmaps.
+
+```
+# get path using pwd()
+
+docker run --rm -v PATH:/home/ramen-vs-pho jillcates/ramen-vs-pho make -C 'home/ramen-vs-pho' barplot
+
+docker run --rm -v PATH:/home/ramen-vs-pho jillcates/ramen-vs-pho make -C 'home/ramen-vs-pho' maps
+```
+
+Finally, you can create the report markdown file which reports the results. 
+
+```
+# get path using pwd()
+
+docker run --rm -v PATH:/home/ramen-vs-pho jillcates/ramen-vs-pho make -C 'home/ramen-vs-pho' all
+```
